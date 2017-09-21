@@ -1,0 +1,71 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<md-sidenav-container>
+    <md-sidenav #sidenav mode="side" opened="false" style="width:250px">
+       
+          <div class="example-scrolling-content">
+            <md-list>
+               
+                <md-list-item style="height:165px;" >
+                    <div >
+                            <button md-fab>
+                                <md-icon style="width:1209x;height:120px" aria-label="Example icon-button with a heart icon">favorite</md-icon>
+                            </button>
+
+                    </div>
+                
+                </md-list-item>
+                <md-divider class="rotate"></md-divider>
+                
+                <md-list-item >
+                <button md-raised-button  color="accent">   
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                  <md-icon  md-list-icon>perm_identity</md-icon>
+                  &nbsp;&nbsp;&nbsp;&nbsp;个&nbsp;人&nbsp;资&nbsp;料 &nbsp;&nbsp;&nbsp;              
+                </button>
+            </md-list-item>
+
+                <md-list-item >
+                    <button md-raised-button  color="accent">   
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                    <md-icon  md-list-icon>camera</md-icon>
+                    &nbsp;&nbsp;&nbsp;&nbsp;我&nbsp;的&nbsp;朋&nbsp;友 &nbsp;&nbsp;&nbsp;              
+                    </button>
+                </md-list-item>
+                
+                <md-list-item >
+                        <button md-raised-button  color="accent">   
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                        <md-icon  md-list-icon>grade</md-icon>
+                        &nbsp;&nbsp;&nbsp;&nbsp;我&nbsp;的&nbsp;关&nbsp;注 &nbsp;&nbsp;&nbsp;              
+                        </button>
+                </md-list-item>
+                
+                <md-list-item >
+                        <button md-raised-button  color="accent">   
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                        <md-icon  md-list-icon>brightness_7</md-icon>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设&nbsp;&nbsp;置 &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;             
+                        </button>
+                </md-list-item>
+               
+              </md-list>
+          </div>
+
+
+    </md-sidenav>
+  
+    <button md-mini-fab (click)="sidenav.toggle()">
+        <md-icon>add</md-icon>
+      </button>
+
+
+
+      <router-outlet></router-outlet>
+  </md-sidenav-container>
+
+
+  
+
+
+

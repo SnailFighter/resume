@@ -1,0 +1,29 @@
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field-width {
+  width: 40%;
+}
+
+.form-width {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-bn {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+}
+
+.input-width-min {
+  width:15%;
+}

@@ -1,0 +1,220 @@
+<md-accordion class="example-headers-align">
+  <md-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
+
+    <md-expansion-panel-header>
+      <md-panel-title>
+        <md-icon color="accent">account_circle</md-icon>
+        &nbsp;&nbsp;基本信息
+      </md-panel-title>
+    </md-expansion-panel-header>
+
+
+
+
+    <table >
+      <tr>
+        <td>
+          <md-form-field >
+            <input mdInput placeholder="姓名">
+          </md-form-field>
+        </td>
+        <td>
+          <md-radio-group>
+            <md-radio-button value="1">Option 1</md-radio-button>
+            <md-radio-button value="2">Option 2</md-radio-button>
+          </md-radio-group>
+        </td>
+        <td>
+          <md-form-field>
+            <input mdInput type="text" min="12" placeholder="籍贯">
+          </md-form-field>
+        </td>
+
+      </tr>
+      <tr>
+        <td>
+            <md-form-field>
+                <input mdInput type="text" min="12" placeholder="生日">
+              </md-form-field>
+        </td>
+       <td>
+          <md-form-field>
+              <input mdInput type="text" min="12" placeholder="年龄">
+            </md-form-field>
+       </td>
+      </tr>
+      <tr>
+          <td>
+              <md-form-field>
+                  <input mdInput type="text" min="12" placeholder="电话">
+                </md-form-field>
+           </td>
+           <td>
+              <md-form-field>
+                  <input mdInput type="text" min="12" placeholder="邮箱">
+                </md-form-field>
+           </td>
+      </tr>
+      <tr>
+          <td>
+              <md-form-field>
+                  <input mdInput type="text" min="12" placeholder="住址">
+                </md-form-field>
+           </td>
+      </tr>
+
+    </table>
+
+    <md-action-row>
+      <button md-button color="accent" (click)="nextStep()">下一步</button>
+    </md-action-row>
+  </md-expansion-panel>
+
+
+
+
+
+
+  <md-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
+    <md-expansion-panel-header>
+      <md-panel-title >
+        <md-icon color="accent">golf_course</md-icon>
+        &nbsp;&nbsp;求职目标
+      </md-panel-title>
+      
+
+    </md-expansion-panel-header>
+    <table id="table">
+      <tr id="tr0">
+        <td >
+          <md-form-field>
+            <input mdInput placeholder="职位">
+          </md-form-field>
+          <md-form-field>
+              <input type="number" mdInput placeholder="薪资">
+          </md-form-field>
+          <button md-button color="accent" (click)="clear('tr0')">
+            <md-icon >clear</md-icon>
+          </button>
+        </td>
+      </tr>
+
+      <td id="test">
+          <ng-template job-holder></ng-template>
+        </td>
+    </table>
+
+    
+      <button md-button color="accent" (click)="addJob()">
+          <md-icon >add</md-icon>
+      </button>
+
+      
+
+    <md-action-row>
+      <button md-button color="primary" (click)="prevStep()">上一步</button>
+      <button md-button color="accent" (click)="nextStep()">下一步</button>
+    </md-action-row>
+  </md-expansion-panel>
+
+
+
+
+
+
+  <md-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
+    <md-expansion-panel-header>
+      <md-panel-title>
+        <md-icon color="accent">school</md-icon>
+        &nbsp;&nbsp;教育经历
+      </md-panel-title>
+    </md-expansion-panel-header>
+
+    <table >
+        <tr>
+          <td>
+            <md-form-field>
+                <input mdInput placeholder="学校名称">
+            </md-form-field>
+          </td>
+          <td>
+            <md-form-field class="input-width-min">
+              <input mdInput placeholder="年份">
+            </md-form-field>
+            <md-form-field class="input-width-min">
+                <input mdInput placeholder="月份">
+           </md-form-field>
+           <p>至</p>
+           <md-form-field class="input-width-min">
+              <input mdInput placeholder="年份">
+            </md-form-field>
+            <md-form-field class="input-width-min">
+                <input mdInput placeholder="月份">
+           </md-form-field>
+          </td>
+         
+        </tr>
+    </table>
+
+    
+
+    <md-action-row>
+      <button md-button color="primary" (click)="prevStep()">上一步</button>
+      <button md-button color="accent" (click)="nextStep()">下一步</button>
+    </md-action-row>
+  </md-expansion-panel>
+
+
+
+
+
+
+
+
+
+  <md-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle="true">
+    <md-expansion-panel-header>
+      <md-panel-title>
+        <md-icon color="accent"> reorder</md-icon>
+        &nbsp;&nbsp;工作经历
+      </md-panel-title>
+    </md-expansion-panel-header>
+
+    <md-form-field>
+      <input mdInput placeholder="学校名称">
+    </md-form-field>
+
+    <md-action-row>
+      <button md-button color="primary" (click)="prevStep()">上一步</button>
+      <button md-button color="accent" (click)="nextStep()">下一步</button>
+    </md-action-row>
+  </md-expansion-panel>
+
+
+
+
+
+
+
+  <md-expansion-panel [expanded]="step === 4" (opened)="setStep(4)" hideToggle="true">
+    <md-expansion-panel-header>
+      <md-panel-title>
+        <md-icon color="accent">attach_file</md-icon>
+        &nbsp;&nbsp;自我评价
+      </md-panel-title>
+
+    </md-expansion-panel-header>
+
+
+    <md-action-row>
+      <button md-button color="primary" (click)="prevStep()">上一步</button>
+      <button md-button color="accent" (click)="nextStep()">保存</button>
+      <button md-button color="accent" (click)="nextStep()">完成</button>
+    </md-action-row>
+  </md-expansion-panel>
+
+</md-accordion>
+
+
+
+    <button md-fab color="accent" class="example-bn">预览</button>

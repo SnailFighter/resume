@@ -1,0 +1,22 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.centerdiv {
+    margin-right: 15%;
+    margin-left:15%
+}
+
+.bluediv{
+    border-radius: 8px;
+    background-color: #CE0261;
+    width: 250px;
+    height:250px;
+    padding: 15px;
+}
+
+.rotate{
+    transform: rotateX(60deg);
+    -webkit-transform: rotateX(60deg);	/* Safari 和 Chrome */
+    -moz-transform: rotateX(60deg);	/* Firefox */
+
+}
